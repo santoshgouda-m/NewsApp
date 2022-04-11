@@ -30,3 +30,11 @@ class Constants {
     }
     
 }
+
+enum TableViewIdentifiers: String {
+    case homeHeader =  "HomeHeaderCell"
+    case sectionHeader = "SectionHeaderCell"
+    case topNews = "TopNewsCell"
+    case popularNews = "PopularNewsCell"
+    case homeFooter = "HomeFooterCell"
+}

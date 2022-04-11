@@ -17,15 +17,9 @@ extension UIImageView {
             self.image = imageFromCache
             return
         }
-        
-//        if CacheMemory.shared.urlCache.contains(urlString) {
-//            return
-//        }
-//        CacheMemory.shared.urlCache.append(urlString)
-        
+                
         URLSession.shared.dataTask(with: url) { (data, respone, error) in
             if error != nil {
-                print(error)
                 return
             }
             DispatchQueue.main.async {

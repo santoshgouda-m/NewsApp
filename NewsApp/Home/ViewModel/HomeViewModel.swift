@@ -62,4 +62,10 @@ class HomeViewModel: BaseViewModel {
     func hasMoreNewsToLoad() -> Bool {
         return (topNewsResponse?.totalResults ?? 0) - 1 > popularNewsDataSource.count
     }
+    
+    func sendPopularNewsData(index: Int) -> [NewsArticles] {
+        var tempArray = self.popularNewsDataSource
+        tempArray.remove(at: index)
+        return tempArray
+    }
 }

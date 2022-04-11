@@ -17,25 +17,19 @@ class ServiceManager {
 extension ServiceManager {
     
     func sendRequest<T: Codable>(request: RequestModel, completion: @escaping(Swift.Result<T, ErrorModel>) -> Void) {
-
-   
-    let session =  URLSession.shared.dataTask(with: request.urlRequest(), completionHandler: { data, response, error in
-        guard let data = data,let responseModel = try? JSONDecoder().decode(T.self, from: data) else {
+        
+        
+        let session =  URLSession.shared.dataTask(with: request.urlRequest(), completionHandler: { data, response, error in
+            guard let data = data,let responseModel = try? JSONDecoder().decode(T.self, from: data) else {
                 let error: ErrorModel = ErrorModel(ErrorKey.parsing.rawValue)
-               print("error")
-
+                print("error")
+                
                 completion(Result.failure(error))
                 return
                 
             }
-
-      
             completion(Result.success(responseModel))
-     
-
-            
-            })
+        })
         session.resume()
-
     }
 }

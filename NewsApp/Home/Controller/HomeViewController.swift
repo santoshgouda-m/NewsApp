@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     func registerCells() {
         newsTableView.register(UINib(nibName: TableViewIdentifiers.homeHeader.rawValue, bundle: nil), forCellReuseIdentifier: TableViewIdentifiers.homeHeader.rawValue)
         newsTableView.register(UINib(nibName: TableViewIdentifiers.sectionHeader.rawValue, bundle: nil), forCellReuseIdentifier: TableViewIdentifiers.sectionHeader.rawValue)
@@ -66,6 +65,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.popularNews.rawValue, for: indexPath) as? PopularNewsCell else { return UITableViewCell() }
             cell.updateUI(newsArticle: viewModel.popularNewsDataSource[indexPath.row])
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch viewModel.dataSource[indexPath.section] {
+        case .topNews:
+            self.viewModel.coordinator?.raise(event: HomeEvent.showDetailScreen(detailObject: viewModel.topNewsArticle, popularArticles: viewModel.popularNewsDataSource))
+        case .homeHeader:
+            return
+        case .popularNews:
+            self.viewModel.coordinator?.raise(event: HomeEvent.showDetailScreen(detailObject: viewModel.popularNewsDataSource[indexPath.row], popularArticles: viewModel.sendPopularNewsData(index: indexPath.row)))
         }
     }
     
@@ -115,17 +125,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return height
         default:
             return 0.0
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch viewModel.dataSource[indexPath.section] {
-        case .topNews:
-            self.viewModel.coordinator?.raise(event: HomeEvent.showDetailScreen(detailObject: viewModel.topNewsArticle, popularArticles: viewModel.popularNewsDataSource))
-        case .homeHeader:
-            return
-        case .popularNews:
-            self.viewModel.coordinator?.raise(event: HomeEvent.showDetailScreen(detailObject: viewModel.popularNewsDataSource[indexPath.row], popularArticles: viewModel.popularNewsDataSource))
         }
     }
     
