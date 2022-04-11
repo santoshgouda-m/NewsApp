@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TopNewsCell" rowHeight="388" id="KGk-i7-Jjw" customClass="TopNewsCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="388"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="437" height="388"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="d9K-ff-3MM">
+                        <rect key="frame" x="20" y="15" width="397" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="nmb-wT-fFk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In 2011, were Maharashtra Andhashraddha Nirmoolan Samiti workers really arrested for Naxal links?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soT-SX-kry">
+                        <rect key="frame" x="20" y="215" width="397" height="64.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="P0r-Yn-XFn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVU-04-meb">
+                        <rect key="frame" x="20" y="289.5" width="397" height="31.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="RNj-MQ-h3a"/>
+                        </constraints>
+                        <string key="text">Since the Pune police’s crackdown on Maoist organizations and naxal supporters, a lot is being discussed about the action taken against Naxalites during the UPA regime.Today, Chidambaram…</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWA-p6-dzn">
+                        <rect key="frame" x="20" y="341" width="80" height="40.5"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="G4D-vU-YDY"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Mrl-k4-NVA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y44-wu-TNt">
+                        <rect key="frame" x="385" y="345.5" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="89K-N2-TVn"/>
+                            <constraint firstAttribute="height" constant="32" id="gFu-lZ-01Q"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="bookMarkRound"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="y44-wu-TNt" firstAttribute="centerY" secondItem="VWA-p6-dzn" secondAttribute="centerY" id="7RH-2W-c44"/>
+                    <constraint firstItem="pVU-04-meb" firstAttribute="top" secondItem="soT-SX-kry" secondAttribute="bottom" constant="10" id="Bhs-8u-l6w"/>
+                    <constraint firstItem="soT-SX-kry" firstAttribute="top" secondItem="d9K-ff-3MM" secondAttribute="bottom" constant="20" id="CVL-Zm-cef"/>
+                    <constraint firstItem="d9K-ff-3MM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="D6n-To-j8v"/>
+                    <constraint firstItem="VWA-p6-dzn" firstAttribute="top" secondItem="pVU-04-meb" secondAttribute="bottom" constant="20" id="KzZ-3j-gal"/>
+                    <constraint firstItem="pVU-04-meb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Lq9-Ja-t0s"/>
+                    <constraint firstItem="soT-SX-kry" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="NcN-fd-9Qq"/>
+                    <constraint firstAttribute="trailing" secondItem="d9K-ff-3MM" secondAttribute="trailing" constant="20" id="X5K-Fa-LQy"/>
+                    <constraint firstAttribute="bottom" secondItem="VWA-p6-dzn" secondAttribute="bottom" constant="6.5" id="fsG-uL-Vme"/>
+                    <constraint firstItem="VWA-p6-dzn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="iNG-GQ-deP"/>
+                    <constraint firstItem="d9K-ff-3MM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="sxv-le-mWg"/>
+                    <constraint firstAttribute="trailing" secondItem="y44-wu-TNt" secondAttribute="trailing" constant="20" id="v0F-6N-elk"/>
+                    <constraint firstAttribute="trailing" secondItem="pVU-04-meb" secondAttribute="trailing" constant="20" id="vUW-Cv-Rhc"/>
+                    <constraint firstAttribute="trailing" secondItem="soT-SX-kry" secondAttribute="trailing" constant="20" id="vk5-lA-BJW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newsDescriptionLabel" destination="pVU-04-meb" id="PDQ-ET-xrP"/>
+                <outlet property="newsSourceLabel" destination="VWA-p6-dzn" id="Pzd-wU-aD2"/>
+                <outlet property="topNewsImage" destination="d9K-ff-3MM" id="cdc-Oy-X1t"/>
+                <outlet property="topNewsTitleLabel" destination="soT-SX-kry" id="OvS-yt-0bZ"/>
+            </connections>
+            <point key="canvasLocation" x="18.115942028985508" y="208.92857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookMarkRound" width="32" height="32"/>
+        <image name="logo" width="108" height="36"/>
+    </resources>
+</document>
